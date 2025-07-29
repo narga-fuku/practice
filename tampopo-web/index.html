@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>たんぽぽこども園</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>たんぽぽこども園</h1>
+    <nav>
+      <ul>
+        <li><a href="#philosophy">理念</a></li>
+        <li><a href="program.html">園の紹介</a></li>
+        <li><a href="event.html">行事</a></li>
+        <li><a href="#recruit">求人</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <h2>たんぽぽこども園へようこそ</h2>
+    <p>〜ひとりひとりの個性を大切に〜</p>
+    <!-- 背景画像をCSSで設定予定 -->
+  </section>
+
+  <!-- 理念 -->
+  <section id="philosophy">
+    <h2>たんぽぽこども園の理念</h2>
+    <h3>~子どもを真ん中に~</h3>
+    <p>子ども一人ひとりが安心して過ごせる環境をつくり、遊び・学び・育ちを見守ります。</p>
+    <!-- 文章は左揃え、右にイメージ画像を置く（jsでアニメーションも設定）-->
+  </section>
+
+  <!-- 園の生活 -->
+  <section id="life">
+    <h2>園での生活</h2>
+    <h3>子どもたちの個性に合わせ、過ごしやすい環境を日々作り上げています</h3>
+    <a href="program.html">詳しくはこちら</a>
+    <!-- 文章は右揃え、左にイメージ画像（jsでアニメーション）-->
+  </section>
+
+  <!-- 季節のイベント -->
+  <section id="event">
+    <h2>季節のイベント</h2>
+    <div class="event-container">
+        <div class="spring">
+            <h2>春</h2>
+            <a href="event.html#spring">春の行事はこちら</a>
+        </div>
+        <div class="summer">
+            <h2>夏</h2>
+            <a href="event.html#summer">夏の行事はこちら</a>
+        </div>
+        <div class="autumn">
+            <h2>秋</h2>
+            <a href="event.html#autumn">秋の行事はこちら</a>
+        </div>
+        <div class="winter">
+            <h2>冬</h2>
+            <a href="event.html#winter">冬の行事はこちら</a>
+        </div>
+        <!-- それぞれ背景画像を設定 -->
+    </div>
+  </section>
+
+  <!-- 求人 -->
+  <section id="recruit">
+    <h2>一緒に働きませんか？</h2>
+    <p>たんぽぽこども園では保育士さんを募集しています。</p>
+    <!-- お問い合わせボタン -->
+    <button id="open-form">📮 お問い合わせ</button>
+
+    <!-- スライド式フォーム -->
+    <div id="contact-form" class="slide-form">
+        <form action="https://formsubmit.co/あなたのメールアドレス" method="POST">
+            <h2>お問い合わせ</h2>
+            <input type="text" name="name" placeholder="お名前" required>
+            <input type="email" name="email" placeholder="メールアドレス" required>
+            <textarea name="message" placeholder="お問い合わせ内容" rows="4" required></textarea>
+            <button type="submit">送信する</button>
+            <button type="button" id="close-form">閉じる</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("open-form").addEventListener("click", () => {
+            document.getElementById("contact-form").classList.add("show");
+        });
+
+        document.getElementById("close-form").addEventListener("click", () => {
+            document.getElementById("contact-form").classList.remove("show");
+        });
+    </script>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 たんぽぽこども園</p>
+  </footer>
+
+</body>
+</html>
